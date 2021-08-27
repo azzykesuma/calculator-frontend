@@ -1,0 +1,190 @@
+* {
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spartan',sans-serif;
+    background-color: hsl(222, 26%, 31%);
+}
+
+
+header {
+    padding : 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color : #fff;
+}
+
+header > div {
+    display: flex;
+    gap : 20px;
+    align-items: center;
+}
+
+header > div > p {
+    font-size: 14px;
+}
+
+.inputField {
+    background-color: hsl(224, 36%, 15%);
+    padding : 20px;
+    color : #fff;
+    text-align: right;
+    margin-inline : 30px;
+    border-radius: 10px;
+    font-size: 40px;
+}
+
+.radioContainer {
+    position: relative;
+}
+
+.toggleNumber {
+    display: flex;
+    gap : 15px;
+    position: absolute;
+    top : -1.5em;
+    left : 10px;
+}
+
+/* toggle button */
+form {
+    display: flex;
+    gap : 5px;
+    background-color: hsl(223, 31%, 20%);
+    padding : 5px;
+    border-radius: 50px;
+}
+
+.toggleRadio {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleRadio input {
+    display: none;
+    cursor: pointer;
+}
+
+.toggleRadio .check {
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    background-color: hsl(6, 63%, 50%);
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.toggleRadio input:checked + .check {
+    opacity: 1;
+    display: inline-block;
+}
+
+.mainContainer {
+    margin-inline : 30px;
+    margin-top: 20px;
+    padding : 20px;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,57px);
+    grid-template-rows: repeat(5,1fr);
+    align-items: center;
+    gap : 15px;
+}
+
+button {
+    padding : 15px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Spartan',sans-serif;
+    font-weight: 700;
+    color : hsl(221, 14%, 31%);
+    font-size: 28px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(180,165,151,0.75);
+}
+
+button:active {
+    transform: translateY(5px);
+}
+
+.focusOperator {
+    background-color: aqua;
+}
+
+.reset {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.equal {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+.delete {
+    background-color: hsl(225, 21%, 49%);
+    color : #fff;
+    box-shadow: 0px 3px 0px 0px rgba(64,78,114,0.75);
+}
+
+.equal {
+    background-color: hsl(6, 63%, 50%);
+    color : #fff;
+    box-shadow: 0px 2px 0px 0px rgba(180,165,151,0.75);
+}
+
+.reset {
+    background-color: hsl(225, 21%, 49%);
+    color : #fff;
+    box-shadow: 0px 3px 0px 0px rgba(64,78,114,0.75);
+}
+
+/* second theme */
+
+.inputFieldSecond {
+    background-color: hsl(0, 0%, 93%);
+}
+
+@media screen and (min-width : 1200px) {
+    body {
+        position: relative;
+    }
+    .main {
+        position: absolute;
+        top : 100px;
+        left : 26%;
+        width: 550px;
+        height: 700px;
+    }
+
+    header {
+        width : 500px;
+    }
+
+    header > div {
+        position: relative;
+        left : 4em;
+    }
+
+    .inputField {
+        width : 500px;
+    }
+
+    .mainContainer {
+        width : 500px;
+        grid-template-columns: repeat(4,100px);
+        gap : 20px;
+    }
+}

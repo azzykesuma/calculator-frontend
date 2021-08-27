@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+  <div class="main">
+    <header>
+      <h1>Calc</h1>
+      <div>
+        <p>THEME</p>
+        <div class="radioContainer">
+          <div class="toggleNumber">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <form action="">
+            <!-- don't forget to use for in label, otherwise it won't recognize the radio and unclickable -->
+            <label for="first" class="toggleRadio">
+              <input type="radio" id="first" value="first" name="toggle-state" checked />
+              <span class="check"></span>
+            </label>
+            <label for="second" class="toggleRadio">
+              <input type="radio" id="second" value="second" name="toggle-state" />
+              <span class="check"></span>
+            </label>
+            <label for="third" class="toggleRadio">
+              <input type="radio" id="third" value="third" name="toggle-state" />
+              <span class="check"></span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- input field -->
+    <section>
+      <div class="inputField">0</div>
+    </section>
+  
+    <!-- calculator section -->
+    <section>
+      <div class="mainContainer">
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="delete" data-action="delete">DEL</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator" data-action="add">+</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator" data-action="subtract">-</button>
+        <button class="decimal" data-action="decimal">.</button>
+        <button class="number">0</button>
+        <button class="operator" data-action="divide">/</button>
+        <button class="operator" data-action="multiply">x</button>
+        <button class="reset" data-action="reset">RESET</button>
+        <button class="equal" data-action="calculate">=</button>
+      </div>
+    </section>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
